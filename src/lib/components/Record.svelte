@@ -12,11 +12,17 @@
 			hour12: false
 		});
 
-		return `${day}, ${month} ${year} - ${hourMinute}`;
+		return `${hourMinute} - ${day}, ${month} ${year}`;
 	}
 </script>
 
-<div>
-	<h1>{bpm}</h1>
-	<h2>{formatCustomDate(date)}</h2>
+<div class="shadow-custom p-4 rounded bg-white flex justify-between align-middle">
+	<h1 class="font-bold text-2xl">{bpm} bpm</h1>
+	<h2 class="font-medium text-lg">{formatCustomDate(date)}</h2>
 </div>
+
+<style>
+	.shadow-custom {
+		box-shadow: 4px 4px 14px rgba(0, 0, 0, 25%);
+	}
+</style>

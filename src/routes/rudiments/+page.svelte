@@ -1,11 +1,13 @@
 <script lang="ts">
+	import Card from '../../lib/components/Card.svelte';
+	import PageTitle from '../../lib/components/PageTitle.svelte';
+
 	export let data;
 </script>
 
-<h1>Rudimentos</h1>
-{#each data.rudiments as r}
-	<a href={`/rudiment/${r.id}`}>
-		<h1>{r.name}</h1>
-		<h2>{r.description}</h2>
-	</a>
-{/each}
+<div class="flex flex-col justify-center align-middle gap-3 w-full">
+	<PageTitle>RUDIMENTOS</PageTitle>
+	{#each data.rudiments as r}
+		<Card name={r.name} description={r.description} href={`/rudiment/${r.id}`} />
+	{/each}
+</div>
