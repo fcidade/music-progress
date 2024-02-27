@@ -4,6 +4,7 @@
 </script>
 
 <Header />
-<div class="m-3 mt-8">
+
+<div class="mx-3 my-3">
 	<slot />
 </div>
